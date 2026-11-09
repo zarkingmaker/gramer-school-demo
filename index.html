@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bright Stars Grammar School</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            fredoka: ['Fredoka', 'sans-serif'],
+            nunito: ['Nunito', 'sans-serif'],
+          },
+          colors: {
+            schoolYellow: '#FFC107',
+            schoolBlue: '#1E88E5',
+            schoolPink: '#FF4081',
+            schoolGreen: '#4CAF50',
+            schoolPurple: '#9C27B0',
+            schoolOrange: '#FF9800',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-nunito bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-schoolPink via-schoolPurple to-schoolBlue text-white text-xs sm:text-sm font-bold py-2 px-4 text-center shadow-inner flex justify-center items-center gap-2">
+    <span><i class="fa-solid fa-graduation-cap"></i> Admissions Open for Academic Year 2026-2027!</span>
+    <a href="#contact" class="underline hover:text-schoolYellow transition">Apply Now</a>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="bg-white shadow-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3 cursor-pointer">
+          <div class="w-12 h-12 bg-schoolYellow rounded-2xl flex items-center justify-center text-white text-2xl shadow-md transform -rotate-3 hover:rotate-0 transition">
+            <i class="fa-solid fa-school text-slate-800"></i>
+          </div>
+          <div>
+            <span class="font-fredoka text-2xl font-bold tracking-wide text-slate-800">Bright Stars</span>
+            <span class="block text-xs font-bold text-schoolPink tracking-widest uppercase">Grammar School</span>
+          </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-6 font-bold text-slate-700">
+          <a href="#home" class="hover:text-schoolBlue transition">Home</a>
+          <a href="#features" class="hover:text-schoolPink transition">About Us</a>
+          <a href="#homework" class="hover:text-schoolGreen transition">Daily Homework</a>
+          <a href="#reviews" class="hover:text-schoolPurple transition">Reviews</a>
+          <a href="#contact" class="hover:text-schoolOrange transition">Contact</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="#homework" class="bg-schoolGreen hover:bg-green-600 text-white font-bold py-2.5 px-5 rounded-full shadow-lg hover:shadow-xl transition flex items-center gap-2 transform hover:-translate-y-0.5">
+            <i class="fa-solid fa-book-open"></i> Homework Portal
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" class="text-slate-700 text-2xl focus:outline-none">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 pt-2 pb-6 space-y-3 font-bold text-slate-700">
+      <a href="#home" class="block py-2 hover:text-schoolBlue">Home</a>
+      <a href="#features" class="block py-2 hover:text-schoolPink">About Us</a>
+      <a href="#homework" class="block py-2 hover:text-schoolGreen">Daily Homework</a>
+      <a href="#reviews" class="block py-2 hover:text-schoolPurple">Reviews</a>
+      <a href="#contact" class="block py-2 hover:text-schoolOrange">Contact</a>
+      <a href="#homework" class="block text-center bg-schoolGreen text-white py-2.5 rounded-full mt-4">
+        <i class="fa-solid fa-book-open mr-2"></i> Homework Portal
+      </a>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-b from-blue-50 to-white py-16 lg:py-24 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block bg-amber-100 text-amber-800 font-bold px-4 py-1.5 rounded-full text-sm mb-4">
+              <i class="fa-solid fa-star text-schoolYellow mr-1"></i> Nurturing Tomorrow's Leaders
+            </span>
+            <h1 class="font-fredoka text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight">
+              A Colorful Place to <span class="text-schoolBlue underline decoration-schoolYellow">Learn</span>, <span class="text-schoolPink underline decoration-schoolGreen">Grow</span> & Succeed!
+            </h1>
+            <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+              Welcome to Bright Stars Grammar School. We empower young minds with top-tier education, creative learning techniques, interactive homework tracking, and a vibrant community.
+            </p>
+            <div class="mt-8 flex flex-wrap
